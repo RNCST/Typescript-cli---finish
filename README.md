@@ -3,7 +3,7 @@
 ### Console 기반 typescript club-membership-member 프로그램
 
 MVC pattern
-
+```
 src
   ├─da.map
   │  └─io
@@ -19,7 +19,7 @@ src
   │  ├─menu
   │  └─view
   └─util
-
+```
 
 ```
 
