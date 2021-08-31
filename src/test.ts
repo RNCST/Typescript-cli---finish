@@ -45,18 +45,16 @@ console.log('sampleBoard add ok ')
 for (let i = 0; i < 9; i++) {
   let samplePostingDTO1 = new PostingDTO(`samplePostingTitle-${i}`,'test1@test1.co.kr'
   ,`sampleContents-${i}`);
-  let samplePostingDTO2 = new PostingDTO(`samplePostingTitle-${i}`,'test2@test2.co.kr'
-    ,`sampleContents-${i}`);
-  ServiceLogicLifeCycler.shareInstance().createPostingService().register(
-    `${i}`,samplePostingDTO1 );
-  ServiceLogicLifeCycler.shareInstance().createPostingService().register(
-    `${i}`,samplePostingDTO2 );
+  // let samplePostingDTO2 = new PostingDTO(`samplePostingTitle-${i+1}`,'test2@test2.co.kr'
+  //   ,`sampleContents-${i+1}`);
+  ServiceLogicLifeCycler.shareInstance().createPostingService().register(`${i}`,samplePostingDTO1 );
+  // ServiceLogicLifeCycler.shareInstance().createPostingService().register(`${i}`,samplePostingDTO2 );
 }
 console.log('samplePosting add ok ');
-
 console.log('\n clubName = club0~8 ')
 console.log('\n memberEmail test1@test1.co.kr, test2@test2.co.kr')
 question('all sample ok "enter" to start');
+
 // aa
 const mainMenu = new MainMenu();
 

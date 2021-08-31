@@ -18,7 +18,12 @@ export default class PostingMapStore implements PostingStore {
     const targetPosting = this.postingMap.get(posting.getId());
 
     if(targetPosting){
-      throw new Error(`\n> Already exists posting + ${targetPosting}`);
+
+      console.log(MemoryMap.getInstance().postingMap);
+      
+      console.log(posting.getId());
+      
+      throw new Error(`\n> Already exists posting + ${targetPosting.contents} + ${targetPosting.title}`);
     }
 
     this.postingMap.set(posting.getId(), posting);
