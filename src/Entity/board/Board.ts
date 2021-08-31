@@ -29,7 +29,7 @@ export default class Board implements Entity{
     return new Board('','','');
     }
 
-    get nextPosting(): string {
+    get nextPostingId(): string {
         return `${this.clubId} + ${++this.sequence}`;
     }
 
